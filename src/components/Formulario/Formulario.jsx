@@ -1,0 +1,60 @@
+import React, { useState } from "react";
+
+const Formulario = () => {
+  
+    const [userData, setUserData] = useState({
+        nombre: "",
+        apellido: "",
+        telefono: ""
+        
+    })
+
+    
+   const handleChange = (e) => {
+    setUserData({...userData, [e.target.name]: e.target.value});
+  } 
+
+  const envioDeFormulario = (evento)=>{
+    evento.preventDefault()
+    // LOGIN
+  
+    console.log(userData)
+
+  }
+  
+
+  return (
+    <div>
+      <h1>Estamos en el formulario</h1>
+
+      <form onSubmit={envioDeFormulario}>
+        <input
+          type="text"
+          placeholder="Nombres"
+          name="nombre"
+          value={userData.nombre}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          placeholder="Apellidos"
+          name="apellido"
+          value={userData.apellido}
+          onChange={handleChange}
+        />
+        <input
+          type="text"
+          placeholder="Telefono"
+          name="telefono"
+          value={userData.telefono}
+          onChange={handleChange}
+        />
+
+        <button type="submit">Enviar</button>
+        <button type="button">cancelar</button>
+      </form>
+    </div>
+  );
+};
+
+export default Formulario;

@@ -1,0 +1,45 @@
+{
+
+    "products": [
+  
+      {
+        "id": 1,
+        "title": "Shampoo Liquido",
+        "price": 1100,
+        "stock": 5,
+        "description": "NO CONTIENE SULFATOS NI PARABENOS",
+        "category": "capilar",
+        "img": "https://res.cloudinary.com/dvzpdj40x/image/upload/v1683998639/shampoo_liqudo_gznd78.jpg"
+      },
+      {
+        "id": 2 ,
+        "title": "Shampoo Solido",
+        "price": 1200,
+        "stock": 5,
+        "description": "Elaborado con componentes naturales",
+        "category": "capilar",
+        "img": "https://res.cloudinary.com/dvzpdj40x/image/upload/v1683998640/shampoo_solido_rzf4vy.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Acondicionador Solido",
+        "price": 1200,
+        "stock": 5,
+        "description":  "Elaborado con componentes naturales",
+        "category": "capilar",
+        "img": "https://res.cloudinary.com/dvzpdj40x/image/upload/v1683998640/Acondicionador_solido_t4etqw.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Acondicionador Liquido",
+        "price":  1100,
+        "stock": 5,
+        "description": "Contiene tensioactivos naturales derivados del aceite de coco.",
+        "category": "capilar",
+        "img": "https://res.cloudinary.com/dvzpdj40x/image/upload/v1683998640/acondicionador_liquido_ekzdmt.jpg"
+      }
+      
+  
+    ]
+  
+  }
