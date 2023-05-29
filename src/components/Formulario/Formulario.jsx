@@ -1,27 +1,21 @@
 import React, { useState } from "react";
 
 const Formulario = () => {
-  
-    const [userData, setUserData] = useState({
-        nombre: "",
-        apellido: "",
-        telefono: ""
-        
-    })
+  const [userData, setUserData] = useState({
+    nombre: "",
+    apellido: "",
+    telefono: "",
+  });
 
-    
-   const handleChange = (e) => {
-    setUserData({...userData, [e.target.name]: e.target.value});
-  } 
+  const handleChange = (e) => {
+    setUserData({ ...userData, [e.target.name]: e.target.value });
+  };
 
-  const envioDeFormulario = (evento)=>{
-    evento.preventDefault()
-    // LOGIN
-  
-    console.log(userData)
+  const envioDeFormulario = (evento) => {
+    evento.preventDefault();
 
-  }
-  
+    console.log(userData);
+  };
 
   return (
     <div>
@@ -30,21 +24,21 @@ const Formulario = () => {
       <form onSubmit={envioDeFormulario}>
         <input
           type="text"
-          placeholder="Nombres"
+          placeholder="ingresa tu nombre"
           name="nombre"
           value={userData.nombre}
           onChange={handleChange}
         />
         <input
           type="text"
-          placeholder="Apellidos"
+          placeholder="ingresa tu apellido"
           name="apellido"
           value={userData.apellido}
           onChange={handleChange}
         />
         <input
           type="text"
-          placeholder="Telefono"
+          placeholder="ingresa tu apellido"
           name="telefono"
           value={userData.telefono}
           onChange={handleChange}

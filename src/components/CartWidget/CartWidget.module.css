@@ -1,20 +1,26 @@
-.container-cart{
-   width: 150px;
+.container-cart {
    display: flex;
-   justify-content: center;
    align-items: center;
    position: relative;
+ }
+ 
+ .container-cart svg {
+   font-size: 2rem;
    color: beige;
-}
-.bubble-counter{
-   width: 30px;
-   height: 30px;
-   border: 2px solid beige;
-   border-radius: 50%;
+ }
+ 
+ .bubble-counter {
    position: absolute;
-   top: -50%;
-   right: 45px;
+   top: -6px;
+   right: -8px;
    display: flex;
-   justify-content: center;
    align-items: center;
-}
+   justify-content: center;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   background-color: red;
+   color: white;
+   font-size: 12px;
+ }
+ 

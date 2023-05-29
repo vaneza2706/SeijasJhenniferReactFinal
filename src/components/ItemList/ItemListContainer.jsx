@@ -9,20 +9,24 @@ import { getDocs, collection, query, where } from "firebase/firestore";
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
 
-  const { category } = useParams();
+  const { categoryName } = useParams();
+  console.log("categoryName:", categoryName);
 
   useEffect(() => {
     let consulta;
-    const itemCollection = collection(db, "product");
+    const itemCollection = collection(db, "products");
 
-    if (category) {
+    if (categoryName) {
       const itemsCollectionFiltered = query(
         itemCollection,
-        where("category", "==", category)
+        where("category", "==", categoryName)
       );
       consulta = itemsCollectionFiltered;
     } else {
       consulta = itemCollection;
+
+     // console.log("categoryName:", categoryName); // Agregado console.log
+     // console.log("consulta:", consulta); // Agregado console.log
     }
 
     getDocs(consulta)
@@ -34,10 +38,12 @@ const ItemListContainer = () => {
           };
         });
 
+       // console.log(product); // Agregar este console.log
+
         setItems(product);
       })
       .catch((err) => console.log(err));
-  }, [category]);
+  }, [categoryName]);
 
   return (
     <div>
